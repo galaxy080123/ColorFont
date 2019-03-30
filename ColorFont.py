@@ -78,6 +78,7 @@ class Color:
         Color.set_cmd_text_color(foregroundcolor | backgroundcolor)
         sys.stdout.write(text + end)
         Color.resetColor()
+        return 0;
 
 
 if __name__ == '__main__':
