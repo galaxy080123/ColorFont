@@ -42,6 +42,42 @@ ColorFont.Color.printColoredText('hello', 0x02, 0x10, '\n')
 std_out_handle = ctypes.windll.kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
 
 class Color:
+ font_color = {
+    'black' : 0x00,
+    'blue' : 0x01,
+    'green' : 0x02,
+    'light_green' : 0x03,
+    'red' : 0x04,
+    'purple' : 0x05,
+    'yellow' : 0x06,
+    'white' : 0x07,
+    'grey' : 0x08,
+    'pale_blue' : 0x09,
+    'pale_green' : 0x0a,
+    'light_pale_green' : 0x0b,
+    'pale_red' : 0x0c,
+    'pale_purple' : 0x0d,
+    'pale_yellow' : 0x0e,
+    'light_white' : 0x0f,
+    }
+    bg_color = {
+    'black' : 0x00,
+    'blue' : 0x10,
+    'green' : 0x20,
+    'light_green' : 0x30,
+    'red' : 0x40,
+    'purple' : 0x50,
+    'yellow' : 0x60,
+    'white' : 0x70,
+    'grey' : 0x80,
+    'pale_blue' : 0x90,
+    'pale_green' : 0xa0,
+    'light_pale_green' : 0xb0,
+    'pale_red' : 0xc0,
+    'pale_purple' : 0xd0,
+    'pale_yellow' : 0xe0,
+    'light_white' : 0xf0,
+    }
     def set_cmd_text_color(color, handle=std_out_handle):
         Bool = ctypes.windll.kernel32.SetConsoleTextAttribute(handle, color)
         return Bool
