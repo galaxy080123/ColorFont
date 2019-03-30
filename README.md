@@ -40,4 +40,4 @@ python setup.py install
 
 import ColorFont
 
-ColorFont.Color.printColoredText('hello', 0x02, 0x10, '\n')
+ColorFont.Color.printColoredText('hello', ColorFont.Color.font_color['blue'], ColorFont.Color.bg_color['light_green'], '\n')
